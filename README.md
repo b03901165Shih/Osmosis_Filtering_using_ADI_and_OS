@@ -15,24 +15,47 @@ In this project, we implemented a solver for the osmosis model based on the Alte
 ## Seamless Cloning
 
 ```
-Run: solve_imageFusion.m
+solve_imageFusion.m
 ```
 
 Set *local* to *true* to apply Dirichlet boundary condition outside the ROI; otherwise, the osmosis will be solved globally. 
 The local and global osmosis filtering models are described in [[5]](#5).
 
 > ### Results
-Input/ result (local)/ result (global):
+Input | Result (local) | Result (global):
 <p align="left">
   <img width="30%" height="30%" src="./results/fusion/fusion_input.png" />
   <img width="30%" height="30%" src="./results/fusion/fusion_output_local.png" />
   <img width="30%" height="30%" src="./results/fusion/fusion_output.png" />
 </p>
 
-
-
 ## Shadow Removal
 
+```
+solve_shadowRemoval.m
+```
+Set *local* to *true* to apply Dirichlet boundary condition outside the ROI; otherwise, the osmosis will be solved globally. 
+Set *anisotrpic_diffusion* to *true* to apply anisotropic diffusion on shadow boundary, which can preserve the details inside the boundary. 
+For anisotropic diffusion, the Peachman-Rachford ADI scheme is not applicable since the problem contains mixed derivative term.
+
+> ### Results
+Input:
+<p align="left">
+  <img width="40%" height="40%" src="./imgs/shadow/ball.png" />
+</p>
+
+Result (isotropic+local) | Result (anisotropic+local):
+<p align="left">
+  <img width="40%" height="40%" src="./results/shadow/ball_output.png" />
+  <img width="40%" height="40%" src="./results/shadow/ball_output_aniso.png" />
+</p>
+
+
+Result (isotropic+global) | Result (anisotropic+global):
+<p align="left">
+  <img width="40%" height="40%" src="./results/shadow/ball_output_global.png" />
+  <img width="40%" height="40%" src="./results/shadow/ball_output_aniso_global.png" />
+</p>
 
 
 
