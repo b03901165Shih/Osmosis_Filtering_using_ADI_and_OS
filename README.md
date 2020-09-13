@@ -37,7 +37,7 @@ solve_shadowRemoval.m
 ```
 Set *local* to *true* to apply Dirichlet boundary condition outside the ROI; otherwise, the osmosis will be solved globally. 
 
-Set *anisotrpic_diffusion* to *true* to apply anisotropic diffusion on shadow boundary, which can preserve the details inside the boundary. 
+Set *anisotrpic_diffusion* to *true* to apply anisotropic diffusion on shadow boundary, which can preserve details inside the boundary. 
 
 For anisotropic diffusion, the Peachman-Rachford ADI scheme is not applicable since the problem contains mixed derivative term.
 
