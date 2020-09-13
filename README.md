@@ -18,7 +18,8 @@ In this project, we implemented a solver for the osmosis model based on the Alte
 solve_imageFusion.m
 ```
 
-Set *local* to *true* to apply Dirichlet boundary condition outside the ROI; otherwise, the osmosis will be solved globally. 
+Set *local* to *true* to apply Dirichlet boundary condition outside the ROI; otherwise, the osmosis will be solved globally.
+
 The local and global osmosis filtering models are described in [[5]](#5).
 
 > ### Results
@@ -35,7 +36,9 @@ Input | Result (local) | Result (global):
 solve_shadowRemoval.m
 ```
 Set *local* to *true* to apply Dirichlet boundary condition outside the ROI; otherwise, the osmosis will be solved globally. 
+
 Set *anisotrpic_diffusion* to *true* to apply anisotropic diffusion on shadow boundary, which can preserve the details inside the boundary. 
+
 For anisotropic diffusion, the Peachman-Rachford ADI scheme is not applicable since the problem contains mixed derivative term.
 
 > ### Results
