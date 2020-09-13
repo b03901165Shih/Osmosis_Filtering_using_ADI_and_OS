@@ -7,12 +7,12 @@ The anisotropic osmosis filtering is a drift-diffusion partial differential equa
 <p align="left">
   <img width="40%" height="40%" src="https://github.com/b03901165Shih/Osmosis_Filtering_using_ADI_and_OS/blob/master/graph/ansi_osmosis.png" />
 </p>
+
 where **d** is the vector drift field. For isotropic diffusion, **W** is set to an identity matrix. A detailed explanation of the model can be found in [[1]](#1) to [[4]](#4).
 
 In this project, we implemented a solver for the osmosis model based on the Alternating Direction Implicit (ADI) method and the Operator Splitting (OS) method. The applications include shadow removal and seamless cloning. 
 
 ## Shadow Removal
-
 
 
 
